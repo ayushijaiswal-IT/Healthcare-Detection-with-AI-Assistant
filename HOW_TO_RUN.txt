@@ -1,0 +1,42 @@
+HEALTHCARE DETECTION WITH AI ASSISTANT - HOW TO RUN ON YOUR PC
+==============================================================
+
+STEP 1 - Install Python (one time, free)
+  Download Python 3.12 or 3.13 from https://www.python.org/downloads/
+  WINDOWS: on the first installer screen tick  "Add python.exe to PATH"
+
+STEP 2 - Unzip the project folder anywhere (e.g. Desktop)
+
+STEP 3 - Start the app
+  WINDOWS : double-click  start_windows.bat
+  MAC     : open Terminal, type  bash  (with a space), drag start_mac_linux.sh into the window, press Enter
+  LINUX   : bash start_mac_linux.sh
+
+  The first start installs the free libraries (about 3-5 minutes, needs internet).
+  After that it starts in a few seconds. Your browser opens automatically at:
+
+        http://127.0.0.1:8000
+
+  Keep the black window open while using the app. Close it (or press CTRL+C) to stop.
+
+STEP 4 - Use the app
+  - Click "Start demo session" to try it without an account (AI chatbot is disabled in demo), or
+  - Click "Create account" to use everything, including the AI Health Assistant.
+  - Go to "Analyze Report" -> "Use a sample report" -> "Fever with jaundice" -> "Analyze with AI".
+  - Sample PDF reports to test uploading are in the folder:  data/samples
+
+OPTIONAL
+  - Reading PHOTOS and SCANNED PDFs:
+      Built-in deep learning OCR (RapidOCR) is already included and works out of the box with zero external setup.
+      Optional: External Tesseract OCR is also supported if installed:
+        Windows: https://github.com/UB-Mannheim/tesseract/wiki
+        Mac:     brew install tesseract        Linux: sudo apt install tesseract-ocr
+  - The chatbot is free and works offline. A Claude API key (paid) is optional - see .env.example.
+
+TROUBLESHOOTING
+  - "python is not recognized": reinstall Python and tick "Add python.exe to PATH".
+  - Port 8000 busy: activate the environment and start on another port:
+        Windows:    .venv\Scripts\activate   then   python run.py --open --port 8001
+        Mac/Linux:  source .venv/bin/activate then  python run.py --open --port 8001
+  - If saved models don't match your library versions, the app re-trains them automatically
+    the first time (about 10 minutes, one time only).

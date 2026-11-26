@@ -1,0 +1,14 @@
+.venv
+venv
+instance
+__pycache__
+.pytest_cache
+.git
+*.log
+models
+reports/figures/*.png
+notebooks
+docs/*.docx
+docs/*.pptx
+docs/screenshots
+scripts/report/assets

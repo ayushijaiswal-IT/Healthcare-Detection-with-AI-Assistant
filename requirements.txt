@@ -1,0 +1,37 @@
+# --- Web application ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+SQLAlchemy>=2.0
+psycopg[binary]>=3.1      # only used when HC_DATABASE_URL points to PostgreSQL (e.g. free Neon/Supabase)
+pydantic>=2.7
+PyJWT>=2.8
+bcrypt>=4.1
+cryptography>=42
+
+# --- Machine learning ---
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+xgboost>=2.0
+lightgbm>=4.3
+scipy>=1.11
+joblib>=1.4
+shap>=0.45
+matplotlib>=3.8
+seaborn>=0.13
+
+# --- Report extraction & PDF ---
+pdfplumber>=0.11
+PyMuPDF>=1.24
+Pillow>=10.3
+rapidocr-onnxruntime>=1.2.3  # built-in neural OCR (works out of the box without external binaries)
+pytesseract>=0.3.10          # optional Tesseract engine
+reportlab>=4.1
+
+# --- AI assistant (optional: works offline without an API key) ---
+anthropic>=0.70
+
+# --- Testing ---
+pytest>=8.0
+httpx>=0.27
